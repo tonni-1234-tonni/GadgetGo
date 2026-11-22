@@ -1,0 +1,113 @@
+body {
+    background-color: #f8f9fa;
+    /* Light background color */
+    font-family: Arial, sans-serif;
+    /* Font style */
+}
+
+.container {
+    margin-top: 20px;
+    /* Space from the top */
+}
+
+.product-details {
+    display: flex;
+    /* Flexbox for layout */
+    margin-bottom: 20px;
+    /* Space below product details */
+}
+
+.product-images {
+    flex: 1;
+    /* Take up 1 part of the flex container */
+    margin-right: 20px;
+    /* Space between images and details */
+}
+
+.product-image {
+    max-width: 100%;
+    /* Responsive image */
+    height: auto;
+    /* Maintain aspect ratio */
+    border: 1px solid #ccc;
+    /* Border for the main image */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+.thumbnail {
+    max-width: 80px;
+    /* Thumbnail size */
+    margin: 5px;
+    /* Space between thumbnails */
+    cursor: pointer;
+    /* Pointer cursor for thumbnails */
+}
+
+.product-info {
+    flex: 2;
+    /* Take up 2 parts of the flex container */
+}
+
+.product-title {
+    font-size: 24px;
+    /* Title font size */
+    margin: 10px 0;
+    /* Space around title */
+}
+
+.product-price {
+    color: green;
+    /* Price color */
+    font-size: 20px;
+    /* Price font size */
+    margin: 10px 0;
+    /* Space around price */
+}
+
+.old-price {
+    text-decoration: line-through;
+    /* Strikethrough for old price */
+    color: red;
+    /* Color for old price */
+}
+
+.color-options {
+    margin: 10px 0;
+    /* Space around color options */
+}
+
+.color-option {
+    display: inline-block;
+    /* Inline display for color options */
+    width: 20px;
+    /* Width for color options */
+    height: 20px;
+    /* Height for color options */
+    border-radius: 50%;
+    /* Circular color options */
+    margin-right: 10px;
+    /* Space between color options */
+    cursor: pointer;
+    /* Pointer cursor for color options */
+}
+
+.warranty {
+    margin: 10px 0;
+    /* Space around warranty */
+}
+
+.chat-button {
+    background-color: #25D366;
+    /* WhatsApp color */
+    color: white;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding for button */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor for button */
+}

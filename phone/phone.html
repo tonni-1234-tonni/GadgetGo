@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phones - Gadget & Go</title>
+    <link rel="icon" type="image/x-icon" href="MainLogo.jpg">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+ 
+</head>
+<body>
+    <div class="navbar background">
+        <div class="logo">
+            <img src="MainLogo.jpg" alt="Logo">
+        </div>
+
+        <div class="leftnav">
+            <input type="text" name="search" id="search" placeholder="Search products">  
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="/cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/login_registration/login_registration.html"><i class="fa-solid fa-user"></i></a></li>
+
+            <button class="btn btn-success"><a class="nav-link" href="/offer/offers.html">Offer</a></button>
+            <button class="btn btn-success"><a class="nav-link" href="/Online%20Exclusive/online_exclusive.html">Online Exclusive</a></button>
+        </div>
+        </ul>
+        
+    <!-- Category Navbar -->
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+
+
+            <!-- PC -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">PC</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/pc/laptops/laptops.html">Laptops</a></li>
+                    <li><a class="dropdown-item" href="/pc/desktops/desktops.html">Desktops</a></li>
+                    <li><a class="dropdown-item" href="/pc/monitors/monitors.html">Monitors</a></li>
+                </ul>
+            </li>
+
+            <!-- Watches -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Watches</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/watches/smartwatches/smartwatches.html">Smartwatches</a></li>
+                    <li><a class="dropdown-item" href="watches/fitness_trackers/fitness_trackers.html">Fitness Trackers</a></li>
+                </ul>
+            </li>
+
+            <!-- Camera -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Camera</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/camera/DSLR/dslr.html">DSLR Cameras</a></li>
+                    <li><a class="dropdown-item" href="/camera/mirrorless/mirrorless.html">Mirrorless Cameras</a></li>
+                    <li><a class="dropdown-item" href="/camera/camera_accessories/camera_accessories.html">Camera Accessories</a></li>
+                </ul>
+            </li>
+
+             <!-- Phones -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/phone/phone.html">Phones</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/phone/iphone/iphone.html">iPhone</a></li>
+                    <li><a class="dropdown-item" href="/phone/samsung/samsung.html">Samsung</a></li>
+                    <li><a class="dropdown-item" href="/phone/oppo/oppo.html">Oppo</a></li>
+                </ul>
+            </li>
+
+            <!-- Gadgets -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Gadgets</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/gadgets/Smart_home_devices/Samart_home_devices.html">Smart Home Devices</a></li>
+                    <li><a class="dropdown-item" href="/gadgets/Drones/drones.html">Drones</a></li>
+                    <li><a class="dropdown-item" href="/gadgets/Wearable_tech/wearable_tech.html">Wearable Tech</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+        
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active">Phones</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <h1 class="text-orange">Official Mobile Phone Price in Bangladesh</h1>
+        <p>Mobile Phone Price starts from 9,999 to 334,999 Taka in Bangladesh. Buy Official Smartphone from Gadget & Gear. Browse below and order yours now.</p>
+
+        <!-- Brand filters -->
+        <div class="brand-filters d-flex flex-wrap gap-2 mb-4">
+            <button class="btn btn-outline-secondary"><a class="nav-link" href="/phone/iphone/iphone.html">iPhone</a></button>
+            <button class="btn btn-outline-secondary"><a class="nav-link" href="/phone/samsung/samsung.html">Samsung</a></button>
+            <button class="btn btn-outline-secondary"><a class="nav-link" href="/phone/oppo/oppo.html">Oppo</a></button>
+
+        </div>
+
+        <div class="row">
+            <!-- Left sidebar -->
+            <div class="col-md-3">
+                <div class="filter-section">
+                    <h4>Price</h4>
+                    <div class="price-range mb-4">
+                        <input type="range" class="form-range" min="7999" max="299999">
+                        <div class="d-flex justify-content-between">
+                            <input type="number" class="form-control" placeholder="Min" value="7999">
+                            <input type="number" class="form-control" placeholder="Max" value="299999">
+                        </div>
+                    </div>
+
+                    <div class="availability mb-4">
+                        <h4>AVAILABILITY</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="online-exclusive">
+                            <label class="form-check-label" for="online-exclusive">Online Exclusive</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="in-stock">
+                            <label class="form-check-label" for="in-stock">In stock</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="out-of-stock">
+                            <label class="form-check-label" for="out-of-stock">Out of Stock</label>
+                        </div>
+                    </div>
+
+                    <div class="brand-filter">
+                        <h4>BRAND</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-iphone">
+                            <label class="form-check-label" for="brand-iphone">iPhone</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-samsung">
+                            <label class="form-check-label" for="brand-samsung">Samsung</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-honor">
+                            <label class="form-check-label" for="brand-honor">HONOR</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-tecno">
+                            <label class="form-check-label" for="brand-tecno">TECNO</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-vivo">
+                            <label class="form-check-label" for="brand-vivo">Vivo</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-oppo">
+                            <label class="form-check-label" for="brand-oppo">Oppo</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-realme">
+                            <label class="form-check-label" for="brand-realme">Realme</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-xiaomi">
+                            <label class="form-check-label" for="brand-xiaomi">Xiaomi</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-huawei">
+                            <label class="form-check-label" for="brand-huawei">Huawei</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-oneplus">
+                            <label class="form-check-label" for="brand-oneplus">OnePlus</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-infinix">
+                            <label class="form-check-label" for="brand-infinix">Infinix</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-motorola">
+                            <label class="form-check-label" for="brand-motorola">Motorola</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-wacom">
+                            <label class="form-check-label" for="brand-wacom">Wacom</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-nokia">
+                            <label class="form-check-label" for="brand-nokia">Nokia</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand-nothing">
+                            <label class="form-check-label" for="brand-nothing">Nothing</label>
+                        </div>
+                    </div>
+
+                    <div class="display-size-filter">
+                        <h4>DISPLAY SIZE</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="size-under5">
+                            <label class="form-check-label" for="size-under5">Under 5"</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="size-5to6">
+                            <label class="form-check-label" for="size-5to6">5" - 6"</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="size-6to7">
+                            <label class="form-check-label" for="size-6to7">6" - 7"</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="size-above7">
+                            <label class="form-check-label" for="size-above7">Above 7"</label>
+                        </div>
+                    </div>
+
+                    <div class="display-type-filter">
+                        <h4>DISPLAY TYPE</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="type-amoled">
+                            <label class="form-check-label" for="type-amoled">AMOLED</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="type-ips">
+                            <label class="form-check-label" for="type-ips">IPS LCD</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="type-oled">
+                            <label class="form-check-label" for="type-oled">OLED</label>
+                        </div>
+                    </div>
+
+                    <div class="chipset-filter">
+                        <h4>CHIPSET</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="chip-snapdragon">
+                            <label class="form-check-label" for="chip-snapdragon">Snapdragon</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="chip-mediatek">
+                            <label class="form-check-label" for="chip-mediatek">MediaTek</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="chip-exynos">
+                            <label class="form-check-label" for="chip-exynos">Exynos</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="chip-bionic">
+                            <label class="form-check-label" for="chip-bionic">Apple Bionic</label>
+                        </div>
+                    </div>
+
+                    <div class="ram-filter">
+                        <h4>RAM</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ram-4gb">
+                            <label class="form-check-label" for="ram-4gb">4GB</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ram-6gb">
+                            <label class="form-check-label" for="ram-6gb">6GB</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ram-8gb">
+                            <label class="form-check-label" for="ram-8gb">8GB</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ram-12gb">
+                            <label class="form-check-label" for="ram-12gb">12GB</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ram-16gb">
+                            <label class="form-check-label" for="ram-16gb">16GB</label>
+                        </div>
+                    </div>
+
+                    <div class="storage-filter">
+                        <h4>INTERNAL STORAGE</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="storage-64gb">
+                            <label class="form-check-label" for="storage-64gb">64GB</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="storage-128gb">
+                            <label class="form-check-label" for="storage-128gb">128GB</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="storage-256gb">
+                            <label class="form-check-label" for="storage-256gb">256GB</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="storage-512gb">
+                            <label class="form-check-label" for="storage-512gb">512GB</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="storage-1tb">
+                            <label class="form-check-label" for="storage-1tb">1TB</label>
+                        </div>
+                    </div>
+
+                    <div class="battery-filter">
+                        <h4>BATTERY CAPACITY</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="battery-3000">
+                            <label class="form-check-label" for="battery-3000">Under 3000mAh</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="battery-3000-4000">
+                            <label class="form-check-label" for="battery-3000-4000">3000-4000mAh</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="battery-4000-5000">
+                            <label class="form-check-label" for="battery-4000-5000">4000-5000mAh</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="battery-5000plus">
+                            <label class="form-check-label" for="battery-5000plus">Above 5000mAh</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product grid -->
+            <div class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <p class="mb-0">249 items found in Phones</p>
+                    <select class="form-select" style="width: auto;">
+                        <option selected>Sort by</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                    </select>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                    <div class="product-container">
+                        <div class="product-card">
+                            <img src="iphone-13.png" alt="iphone-13">
+                            <div class="product-title">iphone-13</div>
+                            <div class="product-price">Tk. 60,499 <span class="original-price">Tk. 86,999</span></div>
+                            <div class="stars">⭐ No Review Yet</div>
+                            <div class="buttons">
+                                <button class="buy-now">Buy Now</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="iphone-15-plus-128gb-green-4.png" alt="iphone-15-plus-128gb-green-4">
+                            <div class="product-title">iphone-15-plus-128gb-green-4</div>
+                            <div class="product-price">Tk. 71,249</div>
+                            <div class="stars">⭐⭐⭐⭐⭐ (5.0)</div>
+                            <div class="buttons">
+                                <button class="buy-now">Buy Now</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="iphone-16-plus-256gb-black.png" alt="iphone-16-plus-256gb-black">
+                            <div class="product-title">iphone-16-plus-256gb-black</div>
+                            <div class="product-price">Tk. 70,249</div>
+                            <div class="stars">⭐⭐⭐⭐⭐ (5.0)</div>
+                            <div class="buttons">
+                                <button class="buy-now">Buy Now</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="iphone-16-128gb-teal.png" alt="Eiphone-16-128gb-teal">
+                            <div class="product-title">iphone-16-128gb-teal</div>
+                            <div class="product-price">Tk. 60,499 <span class="original-price">Tk. 76,999</span></div>
+                            <div class="stars">⭐⭐⭐⭐ (4.0)</div>
+                            <div class="buttons">
+                                <button class="buy-now">Buy Now</button>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more product cards following the same structure -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer support widget -->
+    <div class="support-widget">
+        <div class="chat-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+
+            <div class="col-3 menu">
+               <div class="nav-list">
+                <pre>
+                <li><button type="button" class="btn btn-outline-primary">+0987654321</button></li>
+                <li><h3><a href="#web">Company</a></h3></li>
+                <li><a href="#program">About us</a></li>
+                <li><a href="#course">Our Brands</a></li>
+                <li><a href="#course">Careers</a></li>
+                </pre>
+                
+               </div> 
+            </div>
+    
+            <div class="col-2" style="text-align: center;">
+                <div class="nav-list">
+                    <pre>
+                    <li><h4><a href="#web">Help Center</a></h4></li>
+                    <li><a href="#program">FAQ</a></li>
+                    <li><a href="#course">Support Center</a></li>
+                    <li><a href="#course">Payment Security</a></li>
+                    </pre>
+                    
+                </div> 
+            </div>
+
+
+            <div class="col-3" style="text-align: center;">
+                <div class="nav-list">
+                    <pre>
+                    <li><h4><a href="#web">Terms & Condition</a></h4></li></ul>
+                    <li><p><a href="#program">Terms & Conditions</a></p></li>
+                    <li><a href="#course">Privacy Policy</a></li>
+                    <li><a href="#course">Cookie Policy</a></li>
+                    </pre>
+                </div> 
+            </div>
+    
+            <div class="col-2 right">
+                <div class="aside">
+                    <h5>Newsletter</h5><br>
+                    <p>sign up for get latest news and update</p><br>
+                    <div class="leftnav">
+                        <input type="text" name="search" id="search" placeholder="Enter your Email">  
+                    </div>
+                </div>
+            </div>
+    
+        </div>    
+        
+    </div>
+
+
+    <div class="footer">
+        <p >Copyright &copy; 2025 Gadget & Go. com &nbsp; &nbsp; &nbsp; &nbsp; <img src="PayPic.jpg" alt="Logo"></p>
+    </div>
+
+</body>
+</html>

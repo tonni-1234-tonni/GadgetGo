@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 16 Plus 256GB</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="iPhone.css">
+    <link rel="stylesheet" href="iPhoneDetail.css">
+</head>
+
+<body>
+
+    <div class="navbar background">
+        <div class="logo">
+            <img src="MainLogo.jpg" alt="Logo">
+        </div>
+
+        <div class="leftnav">
+            <input type="text" name="search" id="search" placeholder="Search products">  
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="/cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/login_registration/login_registration.html"><i class="fa-solid fa-user"></i></a></li>
+
+            <button class="btn btn-success"><a class="nav-link" href="/offer/offers.html">Offer</a></button>
+            <button class="btn btn-success"><a class="nav-link" href="/Online%20Exclusive/online_exclusive.html">Online Exclusive</a></button>
+        </div>
+        </ul>
+        
+    <!-- Category Navbar -->
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+
+
+            <!-- PC -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">PC</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/pc/laptops/laptops.html">Laptops</a></li>
+                    <li><a class="dropdown-item" href="/pc/desktops/desktops.html">Desktops</a></li>
+                    <li><a class="dropdown-item" href="/pc/monitors/monitors.html">Monitors</a></li>
+                </ul>
+            </li>
+
+            <!-- Watches -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Watches</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/watches/smartwatches/smartwatches.html">Smartwatches</a></li>
+                    <li><a class="dropdown-item" href="watches/fitness_trackers/fitness_trackers.html">Fitness Trackers</a></li>
+                </ul>
+            </li>
+
+            <!-- Camera -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Camera</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/camera/DSLR/dslr.html">DSLR Cameras</a></li>
+                    <li><a class="dropdown-item" href="/camera/mirrorless/mirrorless.html">Mirrorless Cameras</a></li>
+                    <li><a class="dropdown-item" href="/camera/camera_accessories/camera_accessories.html">Camera Accessories</a></li>
+                </ul>
+            </li>
+
+             <!-- Phones -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/phone/phone.html">Phones</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/phone/iphone/iphone.html">iPhone</a></li>
+                    <li><a class="dropdown-item" href="/phone/samsung/samsung.html">Samsung</a></li>
+                    <li><a class="dropdown-item" href="/phone/oppo/oppo.html">Oppo</a></li>
+                </ul>
+            </li>
+
+            <!-- Gadgets -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Gadgets</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/gadgets/Smart_home_devices/Samart_home_devices.html">Smart Home Devices</a></li>
+                    <li><a class="dropdown-item" href="/gadgets/Drones/drones.html">Drones</a></li>
+                    <li><a class="dropdown-item" href="/gadgets/Wearable_tech/wearable_tech.html">Wearable Tech</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+        
+    </div>
+
+    <div class="container">
+        <div class="product-details">
+            <div class="product-images">
+                <img src="iphone16plus.jpg" alt="iPhone 16 Plus" class="product-image">
+                <div>
+                    <img src="iphone16plus.jpg" alt="iPhone 16 Plus" class="thumbnail"
+                        onclick="changeImage('iphone16plus.jpg')">
+                    <img src="iphone16plus-pink.jpg" alt="iPhone 16 Plus Pink" class="thumbnail"
+                        onclick="changeImage('iphone16plus-pink.jpg')">
+                    <img src="iphone16plus-blue.jpg" alt="iPhone 16 Plus Blue" class="thumbnail"
+                        onclick="changeImage('iphone16plus-blue.jpg')">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1 class="product-title">iPhone 16 Plus 256GB</h1>
+                <div class="product-price">Tk. 1,84,999 <span class="old-price">Tk. 2,04,999</span></div>
+                <p>Status: In Stock</p>
+                <p>Get up to 25K Discount/Free Accessories or enjoy 0% EMI for up to 24 Months. Plus, up to 10K Exchange
+                    Bonus!</p>
+                <div class="color-options">
+                    <span>Color:</span>
+                    <div class="color-option" style="background-color: black;" onclick="selectColor('black')"></div>
+                    <div class="color-option" style="background-color: pink;" onclick="selectColor('pink')"></div>
+                    <div class="color-option" style="background-color: blue;" onclick="selectColor('blue')"></div>
+                </div>
+                <div class="warranty">
+                    <span>Warranty: 1 year Apple Official Bangladesh and International Warranty</span>
+                </div>
+                <button class="chat-button">Chat on WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeImage(image) {
+            document.querySelector('.product-image').src = image;
+        }
+
+        function selectColor(color) {
+            alert("You selected the color: " + color);
+        }
+    </script>
+
+    <div class="footer">
+        <div class="row">
+
+            <div class="col-3 menu">
+               <div class="nav-list">
+                <pre>
+                <li><button type="button" class="btn btn-outline-primary">+0987654321</button></li>
+                <li><h3><a href="#web">Company</a></h3></li>
+                <li><a href="#program">About us</a></li>
+                <li><a href="#course">Our Brands</a></li>
+                <li><a href="#course">Careers</a></li>
+                </pre>
+                
+               </div> 
+            </div>
+    
+            <div class="col-2" style="text-align: center;">
+                <div class="nav-list">
+                    <pre>
+                    <li><h4><a href="#web">Help Center</a></h4></li>
+                    <li><a href="#program">FAQ</a></li>
+                    <li><a href="#course">Support Center</a></li>
+                    <li><a href="#course">Payment Security</a></li>
+                    </pre>
+                    
+                </div> 
+            </div>
+
+
+            <div class="col-3" style="text-align: center;">
+                <div class="nav-list">
+                    <pre>
+                    <li><h4><a href="#web">Terms & Condition</a></h4></li></ul>
+                    <li><p><a href="#program">Terms & Conditions</a></p></li>
+                    <li><a href="#course">Privacy Policy</a></li>
+                    <li><a href="#course">Cookie Policy</a></li>
+                    </pre>
+                </div> 
+            </div>
+    
+            <div class="col-2 right">
+                <div class="aside">
+                    <h5>Newsletter</h5><br>
+                    <p>sign up for get latest news and update</p><br>
+                    <div class="leftnav">
+                        <input type="text" name="search" id="search" placeholder="Enter your Email">  
+                    </div>
+                </div>
+            </div>
+    
+        </div>    
+        
+    </div>
+
+
+    <div class="footer">
+        <p >Copyright &copy; 2025 Gadget & Go. com &nbsp; &nbsp; &nbsp; &nbsp; <img src="PayPic.jpg" alt="Logo"></p>
+    </div>
+
+</body>
+
+</html>

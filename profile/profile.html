@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Gadget & Go</title>
+    <link rel="icon" type="image/x-icon" href="MainLogo.jpg">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+ 
+</head>
+<body>
+    <div class="navbar background">
+        <div class="logo">
+            <img src="MainLogo.jpg" alt="Logo">
+        </div>
+
+        <div class="leftnav">
+            <input type="text" name="search" id="search" placeholder="Search products">  
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="/cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/login_registration/login_registration.html"><i class="fa-solid fa-user"></i></a></li>
+
+            <button class="btn btn-success"><a class="nav-link" href="/offer/offers.html">Offer</a></button>
+            <button class="btn btn-success"><a class="nav-link" href="/Online%20Exclusive/online_exclusive.html">Online Exclusive</a></button>
+        </div>
+        </ul>
+        
+    <!-- Category Navbar -->
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+
+
+            <!-- PC -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">PC</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/pc/laptops/laptops.html">Laptops</a></li>
+                    <li><a class="dropdown-item" href="/pc/desktops/desktops.html">Desktops</a></li>
+                    <li><a class="dropdown-item" href="/pc/monitors/monitors.html">Monitors</a></li>
+                </ul>
+            </li>
+
+            <!-- Watches -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Watches</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/watches/smartwatches/smartwatches.html">Smartwatches</a></li>
+                    <li><a class="dropdown-item" href="watches/fitness_trackers/fitness_trackers.html">Fitness Trackers</a></li>
+                </ul>
+            </li>
+
+            <!-- Camera -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Camera</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/camera/DSLR/dslr.html">DSLR Cameras</a></li>
+                    <li><a class="dropdown-item" href="/camera/mirrorless/mirrorless.html">Mirrorless Cameras</a></li>
+                    <li><a class="dropdown-item" href="/camera/camera_accessories/camera_accessories.html">Camera Accessories</a></li>
+                </ul>
+            </li>
+
+             <!-- Phones -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/phone/phone.html">Phones</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/phone/iphone/iphone.html">iPhone</a></li>
+                    <li><a class="dropdown-item" href="/phone/samsung/samsung.html">Samsung</a></li>
+                    <li><a class="dropdown-item" href="/phone/oppo/oppo.html">Oppo</a></li>
+                </ul>
+            </li>
+
+            <!-- Gadgets -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Gadgets</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/gadgets/Smart_home_devices/Samart_home_devices.html">Smart Home Devices</a></li>
+                    <li><a class="dropdown-item" href="/gadgets/Drones/drones.html">Drones</a></li>
+                    <li><a class="dropdown-item" href="/gadgets/Wearable_tech/wearable_tech.html">Wearable Tech</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+        
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active">My Account</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="profile-sidebar">
+                    <div class="profile-menu-item active">
+                        <i class="fas fa-user"></i>
+                        <span>Account Info</span>
+                    </div>
+                    <div class="profile-menu-item">
+                        <i class="fas fa-box"></i>
+                        <span>My Orders</span>
+                    </div>
+                    <div class="profile-menu-item">
+                        <i class="fas fa-star"></i>
+                        <span>My Reviews</span>
+                    </div>
+                    <div class="profile-menu-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Manage Address</span>
+                    </div>
+                    <div class="profile-menu-item">
+                        <i class="fas fa-gift"></i>
+                        <span>Reward Points</span>
+                    </div>
+                    <div class="profile-menu-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </div>
+                    <div class="profile-menu-item">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="col-md-9">
+                <div class="profile-content">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="default-avatar.jpg" alt="Profile Picture">
+                        </div>
+                        <h2>My Account</h2>
+                    </div>
+
+                    <div class="account-details mt-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3>Account Details</h3>
+                            <button class="btn btn-outline-primary edit-btn">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control" placeholder="Enter your full name" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Phone Number</label>
+                                <input type="text" class="form-control" placeholder="Enter your phone number" readonly>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label>Email</label>
+                                <input type="email" class="form-control" placeholder="Enter your email" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Gender</label>
+                                <select class="form-select" disabled>
+                                    <option selected>Choose a Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="security-section mt-5">
+                            <h3>Security</h3>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label>Current Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter current password">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>New Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter your new password">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer support widget -->
+    <div class="support-widget">
+        <div class="chat-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="row">
+
+            <div class="col-3 menu">
+               <div class="nav-list">
+                <pre>
+                <li><button type="button" class="btn btn-outline-primary">+0987654321</button></li>
+                <li><h3><a href="#web">Company</a></h3></li>
+                <li><a href="#program">About us</a></li>
+                <li><a href="#course">Our Brands</a></li>
+                <li><a href="#course">Careers</a></li>
+                </pre>
+                
+               </div> 
+            </div>
+    
+            <div class="col-2" style="text-align: center;">
+                <div class="nav-list">
+                    <pre>
+                    <li><h4><a href="#web">Help Center</a></h4></li>
+                    <li><a href="#program">FAQ</a></li>
+                    <li><a href="#course">Support Center</a></li>
+                    <li><a href="#course">Payment Security</a></li>
+                    </pre>
+                    
+                </div> 
+            </div>
+
+
+            <div class="col-3" style="text-align: center;">
+                <div class="nav-list">
+                    <pre>
+                    <li><h4><a href="#web">Terms & Condition</a></h4></li></ul>
+                    <li><p><a href="#program">Terms & Conditions</a></p></li>
+                    <li><a href="#course">Privacy Policy</a></li>
+                    <li><a href="#course">Cookie Policy</a></li>
+                    </pre>
+                </div> 
+            </div>
+    
+            <div class="col-2 right">
+                <div class="aside">
+                    <h5>Newsletter</h5><br>
+                    <p>sign up for get latest news and update</p><br>
+                    <div class="leftnav">
+                        <input type="text" name="search" id="search" placeholder="Enter your Email">  
+                    </div>
+                </div>
+            </div>
+    
+        </div>    
+        
+    </div>
+
+
+    <div class="footer">
+        <p >Copyright &copy; 2025 Gadget & Go. com &nbsp; &nbsp; &nbsp; &nbsp; <img src="PayPic.jpg" alt="Logo"></p>
+    </div>
+
+    
+</body>
+</html> 
