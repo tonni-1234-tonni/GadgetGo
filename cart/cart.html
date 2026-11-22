@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="icon" type="image/x-icon" href="MainLogo.jpg">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+ 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        .cart-container {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cart-items {
+            flex: 2;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .cart-summary {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .item-checkbox {
+            margin-right: 15px;
+        }
+
+        .item-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-title {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .item-color {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .item-price {
+            color: #ff5722;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 20px;
+        }
+
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .quantity {
+            font-size: 1.1rem;
+        }
+
+        .remove-btn {
+            color: #ff5722;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .summary-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .checkout-btn:hover {
+            background-color: #f4511e;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            display: none;
+        }
+
+        .empty-cart h2 {
+            margin-bottom: 20px;
+        }
+
+        .empty-cart a {
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar background">
+        <div class="logo">
+            <img src="MainLogo.jpg" alt="Logo">
+        </div>
+
+        <div class="leftnav">
+            <input type="text" name="search" id="search" placeholder="Search products">  
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="/cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/login_registration/login_registration.html"><i class="fa-solid fa-user"></i></a></li>
+
+            <button class="btn btn-success"><a class="nav-link" href="/offer/offers.html">Offer</a></button>
+            <button class="btn btn-success"><a class="nav-link" href="/Online%20Exclusive/online_exclusive.html">Online Exclusive</a></button>
+        </div>
+        </ul>
+        
+    <!-- Category Navbar -->
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+
+
+            <!-- PC -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">PC</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/pc/laptops/laptops.html">Laptops</a></li>
+                    <li><a class="dropdown-item" href="/pc/desktops/desktops.html">Desktops</a></li>
+                    <li><a class="dropdown-item" href="/pc/monitors/monitors.html">Monitors</a></li>
+                </ul>
+            </li>
+
+            <!-- Watches -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Watches</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/watches/smartwatches/smartwatches.html">Smartwatches</a></li>
+                    <li><a class="dropdown-item" href="watches/fitness_trackers/fitness_trackers.html">Fitness Trackers</a></li>
+                </ul>
+            </li>
+
+            <!-- Camera -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Camera</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/camera/DSLR/dslr.html">DSLR Cameras</a></li>
+                    <li><a class="dropdown-item" href="/camera/mirrorless/mirrorless.html">Mirrorless Cameras</a></li>
+                    <li><a class="dropdown-item" href="/camera/camera_accessories/camera_accessories.html">Camera Accessories</a></li>
+                </ul>
+            </li>
+
+             <!-- Phones -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/phone/phone.html">Phones</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/phone/iphone/iphone.html">iPhone</a></li>
+                    <li><a class="dropdown-item" href="/phone/samsung/samsung.html">Samsung</a></li>
+                    <li><a class="dropdown-item" href="/phone/oppo/oppo.html">Oppo</a></li>
+                </ul>
+            </li>
+
+            <!-- Gadgets -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Gadgets</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/gadgets/Smart_home_devices/Samart_home_devices.html">Smart Home Devices</a></li>
+                    <li><a class="dropdown-item" href="/gadgets/Drones/drones.html">Drones</a></li>
+                    <li><a class="dropdown-item" href="/gadgets/Wearable_tech/wearable_tech.html">Wearable Tech</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+        
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a> > Cart List
+    </div>
+
+    <div class="cart-container">
+        <div class="cart-items">
+            <div class="empty-cart">
+                <h2>Your cart is empty</h2>
+                <a href=" ">Continue Shopping</a>
+            </div>
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+
+        <div class="cart-summary">
+            <h2 class="summary-title">Order Summary</h2>
+            <div id="summary-items">
+                <!-- Summary items will be dynamically inserted here -->
+            </div>
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">BDT 0</span>
+            </div>
+            <div class="summary-total">
+                <span>TOTAL</span>
+                <span id="total">BDT 0</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        // Sample product data (this would normally come from localStorage or a database)
+       
+
+        function formatPrice(price) {
+            return 'BDT ' + price.toLocaleString();
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const summaryItemsContainer = document.getElementById('summary-items');
+            const emptyCart = document.querySelector('.empty-cart');
+
+            // Clear existing items
+            cartItemsContainer.innerHTML = '';
+            summaryItemsContainer.innerHTML = '';
+            
+            if (cartItems.length === 0) {
+                emptyCart.style.display = 'block';
+                updateTotals();
+                return;
+            }
+
+            emptyCart.style.display = 'none';
+
+            // Add cart items
+            cartItems.forEach((item, index) => {
+                const cartItemHTML = `
+                    <div class="cart-item" data-index="${index}">
+                        <input type="checkbox" class="item-checkbox" checked>
+                        <img src="${item.image}" alt="${item.name}" class="item-image">
+                        <div class="item-details">
+                            <h3 class="item-title">${item.name}</h3>
+                            <p class="item-color">Color: ${item.color}</p>
+                            <p class="item-price">${formatPrice(item.price)}</p>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
+                            <span class="quantity">${item.quantity}</span>
+                            <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                        </div>
+                        <button class="remove-btn" onclick="removeItem(${index})">🗑️</button>
+                    </div>
+                `;
+                cartItemsContainer.innerHTML += cartItemHTML;
+
+                // Add summary item
+                const summaryItemHTML = `
+                    <div class="summary-row">
+                        <img src="${item.image}" alt="${item.name}" class="item-image">
+                        <div>
+                            <p>${item.name}</p>
+                            <p class="item-price">${formatPrice(item.price * item.quantity)}</p>
+                        </div>
+                    </div>
+                `;
+                summaryItemsContainer.innerHTML += summaryItemHTML;
+            });
+
+            updateTotals();
+        }
+
+        function updateTotals() {
+            const subtotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+            document.getElementById('subtotal').textContent = formatPrice(subtotal);
+            document.getElementById('total').textContent = formatPrice(subtotal);
+        }
+
+        function updateQuantity(index, change) {
+            const newQuantity = cartItems[index].quantity + change;
+            if (newQuantity > 0) {
+                cartItems[index].quantity = newQuantity;
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                updateCart();
+            }
+        }
+
+        function removeItem(index) {
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCart();
+        }
+
+        // Add to cart function (to be called from product page)
+        function addToCart(product) {
+            const existingItem = cartItems.find(item => item.id === product.id);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cartItems.push({
+                    ...product,
+                    quantity: 1
+                });
+            }
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCart();
+        }
+
+        // Initialize cart
+        updateCart();
+    </script>
+
+    <div class="footer">
+        <div class="row">
+
+            <div class="col-3 menu">
+               <div class="nav-list">
+                <pre>
+                <li><button type="button" class="btn btn-outline-primary">+0987654321</button></li>
+                <li><h3><a href="#web">Company</a></h3></li>
+                <li><a href="#program">About us</a></li>
+                <li><a href="#course">Our Brands</a></li>
+                <li><a href="#course">Careers</a></li>
+                </pre>
+                
+               </div> 
+            </div>
+    
+            <div class="col-2" style="text-align: center;">
+                <div class="nav-list">
+                    <pre>
+                    <li><h4><a href="#web">Help Center</a></h4></li>
+                    <li><a href="#program">FAQ</a></li>
+                    <li><a href="#course">Support Center</a></li>
+                    <li><a href="#course">Payment Security</a></li>
+                    </pre>
+                    
+                </div> 
+            </div>
+
+
+            <div class="col-3" style="text-align: center;">
+                <div class="nav-list">
+                    <pre>
+                    <li><h4><a href="#web">Terms & Condition</a></h4></li></ul>
+                    <li><p><a href="#program">Terms & Conditions</a></p></li>
+                    <li><a href="#course">Privacy Policy</a></li>
+                    <li><a href="#course">Cookie Policy</a></li>
+                    </pre>
+                </div> 
+            </div>
+    
+            <div class="col-2 right">
+                <div class="aside">
+                    <h5>Newsletter</h5><br>
+                    <p>sign up for get latest news and update</p><br>
+                    <div class="leftnav">
+                        <input type="text" name="search" id="search" placeholder="Enter your Email">  
+                    </div>
+                </div>
+            </div>
+    
+        </div>    
+        
+    </div>
+
+
+    <div class="footer">
+        <p >Copyright &copy; 2025 Gadget & Go. com &nbsp; &nbsp; &nbsp; &nbsp; <img src="PayPic.jpg" alt="Logo"></p>
+    </div>
+    
+</body>
+</html> 

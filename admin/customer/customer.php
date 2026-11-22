@@ -1,0 +1,128 @@
+
+<?php
+session_start();
+
+// Initialize the cart if it's not set
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+    $_SESSION['total'] = 0;
+}
+
+// Handle add-to-cart requests
+if (isset($_POST['add_to_cart'])) {
+    $productId = $_POST['product_id'];
+    $productName = $_POST['product_name'];
+    $productPrice = $_POST['product_price'];
+
+    // Add product to session cart
+    $_SESSION['cart'][] = ['name' => $productName, 'price' => $productPrice];
+    $_SESSION['total'] += $productPrice;
+}
+
+// Get cart items and total
+$cartItems = $_SESSION['cart'];
+$totalPrice = $_SESSION['total'];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Customers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .add-to-cart {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .add-to-cart:hover {
+            background-color: darkgreen;
+        }
+        .cart {
+            margin-top: 20px;
+            border-top: 2px solid #000;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h4>Admin Panel</h4>
+        <a class="nav-link" href="/admin/admin_dashboard/dashboard.html">Dashboard</a>
+        <a class="nav-link" href="/admin/order/order.html">Orders</a>
+        <a class="nav-link" href="/admin/admin_product/product.html">Products</a>
+        <a href="#">Customers</a>
+        <a class="nav-link" href="/admin/settings/settings.html">Settings</a>
+    </div>
+    <h2>Welcome to Our E-Commerce Store</h2>
+    <div class="product-container">
+        <div class="product">
+            <h3>Product 1</h3>
+            <p>Price: $10</p>
+            <form action="" method="POST">
+                <input type="hidden" name="product_id" value="1">
+                <input type="hidden" name="product_name" value="Product 1">
+                <input type="hidden" name="product_price" value="10">
+                <button type="submit" class="add-to-cart" name="add_to_cart">Add to Cart</button>
+            </form>
+        </div>
+        <div class="product">
+            <h3>Product 2</h3>
+            <p>Price: $15</p>
+            <form action="" method="POST">
+                <input type="hidden" name="product_id" value="2">
+                <input type="hidden" name="product_name" value="Product 2">
+                <input type="hidden" name="product_price" value="15">
+                <button type="submit" class="add-to-cart" name="add_to_cart">Add to Cart</button>
+            </form>
+        </div>
+        <div class="product">
+            <h3>Product 3</h3>
+            <p>Price: $20</p>
+            <form action="" method="POST">
+                <input type="hidden" name="product_id" value="3">
+                <input type="hidden" name="product_name" value="Product 3">
+                <input type="hidden" name="product_price" value="20">
+                <button type="submit" class="add-to-cart" name="add_to_cart">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items">
+            <?php foreach ($cartItems as $item): ?>
+                <li><?php echo htmlspecialchars($item['name']); ?> - $<?php echo htmlspecialchars($item['price']); ?></li>
+            <?php endforeach; ?>
+        </ul>
+        <p><strong>Total: $<span id="total-price"><?php echo $totalPrice; ?></span></strong></p>
+    </div>
+</body>
+</html>
+

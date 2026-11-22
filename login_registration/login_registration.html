@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="icon" type="image/x-icon" href="MainLogo.jpg">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+ 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .tab.active {
+            color: #ff5722;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 1rem;
+            padding-left: 2.5rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .form-group input::placeholder {
+            color: #999;
+        }
+
+        .form-group i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 1.5rem;
+        }
+
+        .forgot-password a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+        }
+
+        .register-link {
+            text-align: center;
+        }
+
+        .register-link a {
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .show-password {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #999;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar background">
+        <div class="logo">
+            <img src="MainLogo.jpg" alt="Logo">
+        </div>
+
+        <div class="leftnav">
+            <input type="text" name="search" id="search" placeholder="Search products">  
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="/cart/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/login_registration/login_registration.html"><i class="fa-solid fa-user"></i></a></li>
+
+            <button class="btn btn-success"><a class="nav-link" href="/offer/offers.html">Offer</a></button>
+            <button class="btn btn-success"><a class="nav-link" href="/Online%20Exclusive/online_exclusive.html">Online Exclusive</a></button>
+        </div>
+        </ul>
+        
+    <!-- Category Navbar -->
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+
+
+            <!-- PC -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">PC</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/pc/laptops/laptops.html">Laptops</a></li>
+                    <li><a class="dropdown-item" href="/pc/desktops/desktops.html">Desktops</a></li>
+                    <li><a class="dropdown-item" href="/pc/monitors/monitors.html">Monitors</a></li>
+                </ul>
+            </li>
+
+            <!-- Watches -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Watches</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/watches/smartwatches/smartwatches.html">Smartwatches</a></li>
+                    <li><a class="dropdown-item" href="watches/fitness_trackers/fitness_trackers.html">Fitness Trackers</a></li>
+                </ul>
+            </li>
+
+            <!-- Camera -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Camera</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/camera/DSLR/dslr.html">DSLR Cameras</a></li>
+                    <li><a class="dropdown-item" href="/camera/mirrorless/mirrorless.html">Mirrorless Cameras</a></li>
+                    <li><a class="dropdown-item" href="/camera/camera_accessories/camera_accessories.html">Camera Accessories</a></li>
+                </ul>
+            </li>
+
+             <!-- Phones -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/phone/phone.html">Phones</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/phone/iphone/iphone.html">iPhone</a></li>
+                    <li><a class="dropdown-item" href="/phone/samsung/samsung.html">Samsung</a></li>
+                    <li><a class="dropdown-item" href="/phone/oppo/oppo.html">Oppo</a></li>
+                </ul>
+            </li>
+
+            <!-- Gadgets -->
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#">Gadgets</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/gadgets/Smart_home_devices/Samart_home_devices.html">Smart Home Devices</a></li>
+                    <li><a class="dropdown-item" href="/gadgets/Drones/drones.html">Drones</a></li>
+                    <li><a class="dropdown-item" href="/gadgets/Wearable_tech/wearable_tech.html">Wearable Tech</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+        
+    </div>
+    
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="showLogin()">Login</button>
+            <button class="tab" onclick="showRegister()">Register</button>
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <i>👤</i>
+                <input type="text" placeholder="Enter your email or phone number" required>
+            </div>
+
+            <div class="form-group">
+                <i>🔒</i>
+                <input type="password" placeholder="Password" required>
+                <span class="show-password">👁️</span>
+            </div>
+
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Log In</button>
+
+            <div class="register-link">
+                <span>Don't have an account? </span>
+                <a href="#" onclick="showRegister()">Register Here</a>
+            </div>
+        </form>
+
+        <form id="registerForm" class="hidden">
+            <div class="form-group">
+                <i>📧</i>
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <i>👤</i>
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <i>📞</i>
+                <input type="tel" placeholder="Phone" required>
+            </div>
+            <div class="form-group">
+                <i>🔒</i>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <i>🔒</i>
+                <input type="password" placeholder="Confirm Password" required>
+            </div>
+
+            <button type="submit" class="login-btn">Register</button>
+
+            <div class="register-link">
+                <span>Already have an account? </span>
+                <a href="#" onclick="showLogin()">Login Here</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showLogin() {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('registerForm').classList.add('hidden');
+            document.querySelector('.tab.active').classList.remove('active');
+            document.querySelector('.tab:nth-child(1)').classList.add('active');
+        }
+
+        function showRegister() {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('registerForm').classList.remove('hidden');
+            document.querySelector('.tab.active').classList.remove('active');
+            document.querySelector('.tab:nth-child(2)').classList.add('active');
+        }
+    </script>
+
+    <div class="footer">
+        <div class="row">
+
+            <div class="col-3 menu">
+               <div class="nav-list">
+                <pre>
+                <li><button type="button" class="btn btn-outline-primary">+0987654321</button></li>
+                <li><h3><a href="#web">Company</a></h3></li>
+                <li><a href="#program">About us</a></li>
+                <li><a href="#course">Our Brands</a></li>
+                <li><a href="#course">Careers</a></li>
+                </pre>
+                
+               </div> 
+            </div>
+    
+            <div class="col-2" style="text-align: center;">
+                <div class="nav-list">
+                    <pre>
+                    <li><h4><a href="#web">Help Center</a></h4></li>
+                    <li><a href="#program">FAQ</a></li>
+                    <li><a href="#course">Support Center</a></li>
+                    <li><a href="#course">Payment Security</a></li>
+                    </pre>
+                    
+                </div> 
+            </div>
+
+
+            <div class="col-3" style="text-align: center;">
+                <div class="nav-list">
+                    <pre>
+                    <li><h4><a href="#web">Terms & Condition</a></h4></li></ul>
+                    <li><p><a href="#program">Terms & Conditions</a></p></li>
+                    <li><a href="#course">Privacy Policy</a></li>
+                    <li><a href="#course">Cookie Policy</a></li>
+                    </pre>
+                </div> 
+            </div>
+    
+            <div class="col-2 right">
+                <div class="aside">
+                    <h5>Newsletter</h5><br>
+                    <p>sign up for get latest news and update</p><br>
+                    <div class="leftnav">
+                        <input type="text" name="search" id="search" placeholder="Enter your Email">  
+                    </div>
+                </div>
+            </div>
+    
+        </div>    
+        
+    </div>
+
+
+    <div class="footer">
+        <p >Copyright &copy; 2025 Gadget & Go. com &nbsp; &nbsp; &nbsp; &nbsp; <img src="PayPic.jpg" alt="Logo"></p>
+    </div>
+
+    
+</body>
+</html>

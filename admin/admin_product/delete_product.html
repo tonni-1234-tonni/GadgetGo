@@ -1,0 +1,27 @@
+<?php
+// Include database connection
+include('../connection/connection.php');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $productId = $_POST['id'];
+
+    // Check if product ID is valid
+    if (!empty($productId) && is_numeric($productId)) {
+        // Prepare the delete query
+        $sql = "DELETE FROM products WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $productId);
+
+        if ($stmt->execute()) {
+            echo json_encode(["status" => "success", "message" => "Product deleted successfully."]);
+        } else {
+            echo json_encode(["status" => "error", "message" => "Failed to delete product."]);
+        }
+
+        $stmt->close();
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid product ID."]);
+    }
+}
+$conn->close();
+?>
